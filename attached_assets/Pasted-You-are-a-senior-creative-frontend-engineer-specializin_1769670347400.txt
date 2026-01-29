@@ -1,0 +1,117 @@
+You are a senior creative frontend engineer specializing in cinematic, scroll-driven luxury websites.
+
+Your task:
+Redesign the website to EXACTLY match the animation discipline, timing, and scroll storytelling style of the attached reference video.
+Do NOT create extra animations.
+Do NOT add decorative motion.
+Motion must be minimal, slow, and intentional.
+
+Brand:
+Luxury lab-grown diamonds.
+Elegant. Calm. Ethical. Premium. Scientific.
+
+GLOBAL RULES (MANDATORY):
+- Only ONE primary animation per section
+- No overlapping animations
+- No infinite or looping animations
+- No auto-rotating 3D objects
+- Large empty space is intentional
+- Motion should stop completely between sections
+- If an animation is not guiding attention, REMOVE IT
+
+Tech stack:
+- Next.js (App Router)
+- Tailwind CSS
+- GSAP + ScrollTrigger
+- Lenis (subtle settings only)
+- Spline (ONLY one section)
+- Framer Motion (micro-interactions only)
+
+SCROLL MODEL (CRITICAL):
+- Use GSAP pinned sections
+- Each section pins for extended scroll (150%–250%)
+- Animation timeline per section:
+  • Fade in (0–20%)
+  • Hold (20–70%)
+  • Fade out (70–90%)
+- No animation outside ScrollTrigger timelines
+
+WEBSITE STRUCTURE:
+
+1. HERO SECTION (PINNED)
+- Full viewport
+- Single headline
+- Single subtext
+- Background remains static
+- Text fades in slowly and holds
+- No parallax
+- No background movement
+
+2. DIAMOND REVEAL SECTION (PINNED)
+- One Spline 3D diamond
+- Camera fixed
+- Diamond does NOT auto-rotate
+- Slight mouse interaction only
+- Diamond fades in from black
+- Holds in silence
+- Fades out
+
+3. STORY SECTION (PINNED)
+- Text-only section
+- One paragraph at a time
+- Text slides up slightly + opacity
+- No images
+- No background effects
+
+4. AI GENERATED VISUALS SECTION (PINNED)
+- Generate lab-grown diamond images (mock AI API acceptable)
+- ONE image visible at a time
+- Image cross-fades on scroll
+- No grid
+- No carousels
+
+5. CRAFTSMANSHIP SECTION (PINNED)
+- Clean layout
+- Simple diagrams or text blocks
+- Reveal one element per scroll phase
+- No decorative motion
+
+6. COLLECTION PREVIEW (NOT PINNED)
+- Minimal product cards
+- Hover = subtle scale + shadow only
+- No scroll animations
+
+7. FOOTER
+- Static
+- Calm fade-in only
+
+ANIMATION GUIDELINES:
+- Use only: opacity, translateY, very subtle scale
+- No blur animations
+- No skew
+- No bouncing or elastic easing
+- Use ease: power2.out or similar
+
+LENIS SETTINGS:
+- Smooth but controlled
+- No floaty behavior
+- Disable Lenis inside pinned sections if required
+
+DESIGN RULES:
+- Mostly white or black backgrounds
+- No gradients unless extremely subtle
+- One font pairing only
+- Avoid visual noise
+- Minimal color usage
+
+DELIVERABLES:
+- Clean, readable code
+- One GSAP timeline per section
+- Clear comments explaining scroll logic
+- Modular components
+- No experimental or unused code
+
+IMPORTANT:
+Your goal is NOT to impress with effects.
+Your goal is to recreate the SAME calm, cinematic, scroll-controlled experience as the reference video.
+If something feels flashy or busy, remove it.
