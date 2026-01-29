@@ -2,10 +2,11 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "@studio-freight/lenis";
-import Spline from "@splinetool/react-spline";
 import { motion } from "framer-motion";
 
-gsap.registerPlugin(ScrollTrigger);
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 type PinTimings = {
   fadeInEnd: number;
@@ -181,7 +182,25 @@ function PinnedDiamondReveal() {
             style={{ opacity: 0 }}
             data-testid="spline-diamond"
           >
-            <Spline scene="https://prod.spline.design/6YJ0bP3oXkK0B0h5/scene.splinecode" />
+            <div
+              className="flex h-full w-full items-center justify-center"
+              data-testid="fallback-diamond"
+            >
+              <div className="text-center">
+                <p
+                  className="font-serif text-2xl text-white/90"
+                  data-testid="text-diamond-fallback-title"
+                >
+                  Diamond\u2014revealed
+                </p>
+                <p
+                  className="mt-2 text-sm text-white/55"
+                  data-testid="text-diamond-fallback-subtitle"
+                >
+                  (3D preview unavailable in this environment)
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
